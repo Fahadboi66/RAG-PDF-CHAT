@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+langchain
+langchain-community
+chromadb
+pypdf
+python-pptx
+python-docx
+openpyxl
+sentence-transformers
+unstructured

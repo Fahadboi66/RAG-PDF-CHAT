@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  chromadb:
+    image: chromadb/chroma:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./chroma_data:/chroma/chroma # (./chroma_data local folder for data persistance). Also you can change ./chroma_data location to your local machine folder name,
+
+  python-server:
+    build: ./python-server
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./python-server:/app  # Mount Python code
+      - C:/Users/Fahad Zafar Mayo/OneDrive/Desktop/docs:/documents  # Mount local documents folder
+    depends_on:
+      - chromadb
+      
+volumes:
+  chroma_data:

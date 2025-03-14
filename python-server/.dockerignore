@@ -1,0 +1,6 @@
+# .dockerignore
+__pycache__/
+.git/
+.vscode/
+node_modules/
+*.log
